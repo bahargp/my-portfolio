@@ -377,20 +377,44 @@ div[style*="background-color: #e6f2ff"] {
 }
 
 
+/* Default Grid (Keep this as is) */
 .bahar-gallery {
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* Maintains your 3 columns */
-  gap: 15px; /* Increased gap slightly for a cleaner look */
-  align-items: start; /* Ensures images of different heights align to the top */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-bottom: 30px;
 }
 
-.bahar-gallery a img {
-  width: 100%;       /* Fits the width of the grid column */
-  height: auto;      /* Allows the image to keep its natural proportions */
-  object-fit: contain; /* Ensures the entire image is shown */
+/* New Class for sections with only 1 image */
+.gallery-single {
+  display: flex;
+  justify-content: center;
+}
+.gallery-single a {
+  max-width: 400px; /* Makes the single image stand out more */
+  width: 100%;
+}
+
+/* New Class for sections with 2 images */
+.gallery-double {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+.gallery-double a {
+  max-width: 350px;
+  width: 100%;
+}
+
+/* Ensure all images stay full-sized and uncropped */
+.bahar-gallery img, 
+.gallery-single img, 
+.gallery-double img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
   display: block;
   border-radius: 6px;
-  transition: transform 0.2s ease;
 }
 
 .bahar-gallery a:hover img {
@@ -416,3 +440,4 @@ div[style*="background-color: #e6f2ff"] {
     height: 200px;
   }
 }
+
