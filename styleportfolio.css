@@ -416,4 +416,21 @@ div[style*="background-color: #e6f2ff"] {
   .bahar-gallery a img {
     height: 200px;
   }
+
+}
+
+
+
+.bahar-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Automatically creates columns */
+    gap: 20px;
+    padding: 20px;
+}
+
+.bahar-gallery img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover; 
+    border-radius: 5px;
 }
