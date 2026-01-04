@@ -377,10 +377,14 @@ div[style*="background-color: #e6f2ff"] {
 }
 
 
-.bahar-gallery {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 6px;
+.bahar-gallery a img {
+  width: 100%;
+  height: auto;       /* Change from 260px to auto */
+  object-fit: contain; /* Change from cover to contain */
+  display: block;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: transform 0.2s ease, opacity 0.2s ease;
 }
 
 
@@ -421,16 +425,5 @@ div[style*="background-color: #e6f2ff"] {
 
 
 
-.bahar-gallery {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Automatically creates columns */
-    gap: 20px;
-    padding: 20px;
-}
 
-.bahar-gallery img {
-    width: 100%;
-    height: 250px;
-    object-fit: cover; 
-    border-radius: 5px;
-}
+
